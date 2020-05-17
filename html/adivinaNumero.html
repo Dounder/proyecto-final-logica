@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/adivinaNumero.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://i.imgur.com/CxKUDvX.png">
+    <title>Adivina el número.</title>
+</head>
+
+<body>
+    <div id="header" class="col-md-12 col-sm-12 col-xs-12 text-right">
+        <!--seccion del header-->
+        <a href="" style="text-decoration:none">
+            <!--link al juego de adivina la imagen-->
+            <button>Adivina la Imagen</button>
+        </a>
+        <a href="" style="text-decoration:none">
+            <!--link al juego de sudoku-->
+            <button>Sudoku</button>
+        </a>
+        <a href="" style="text-decoration:none">
+            <!--link a la pagina de contacto-->
+            <button>Contacto</button>
+        </a>
+    </div>
+    <div id="info" class="col-md-12 col-sm-12 col-xs-12 text-center">
+        <!--aqui es donde se muestra toda la informacion al usuario-->
+        <h1>Adivina el Número.</h1>
+        <p>En el siguiente cuadro ingresa un numero entre 1 y 10.</p>
+        <input type="text" id="dato">
+        <button id="button">Resolver</button>
+    </div>
+    <script>
+        //aqui esta el funcionmiento interno del juego
+        var numero = Math.ceil(Math.random() * 10);
+        document.getElementById("button").addEventListener("click", function() {
+            var input = document.getElementById("dato").value;
+
+            if (input == numero) {
+                alert("Felicidades has adivinado el número. \nPulsa aceptar para volver a jugar.");
+                location.reload();
+            } else {
+                alert("Mala suerte, no has adivinado el número. \nEl número era " + numero + "\nPulsa aceptar para volver a jugar.");
+                location.reload();
+            }
+        });
+    </script>
+</body>
+
+</html>
