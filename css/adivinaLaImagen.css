@@ -123,12 +123,15 @@ header{
     background-size: contain;
 }
 /* ----------------------------------home-adivinaLaImagen */
+
+
 .body-home-adivinaLaImagen{
-    position: fixed;
+    background-color: var(--gray-background);
+    /* position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
-    left: 0;
+    left: 0; */
 }
 .home-game-container{
     margin: 30px auto;
@@ -162,6 +165,7 @@ header{
     overflow: hidden;
     margin: 0 10px;
     box-shadow: 3px 3px 8px -3px rgba(0,0,0,0.75);
+    background-color: var(--font-color);
 }
 .image-opinion-container{
     width: 100%;
@@ -236,13 +240,17 @@ header{
     right: 0;
     left: 0;
 }
+.container{
+    background-color: var(--gray-background);
+}
 .game-main-container{
     text-align: center;
     margin: auto;
     width: 800px;
+    height: 600px;
 }
 .game-main-container .game-title{
-    margin: 10px 0;
+    padding: 10px;
     color: var(--font-color-2);
 }
 .game-main-container .game-subtitle{
@@ -284,7 +292,7 @@ header{
 .clues{
     cursor: pointer;
     width: 200px;
-    margin: 10px auto;
+    margin: auto;
     font-size: 18px;
     font-weight: bold;
 }
