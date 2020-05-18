@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300i,400,500,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+button{
+    background: transparent;
+    border-radius: 25px;
+    height: 25px;
+    width: 25px;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts//icomoon.eot?dc1kkj');
+    src:  url('../fonts/icomoon.eot?dc1kkj#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?dc1kkj') format('truetype'),
+      url('../fonts/icomoon.woff?dc1kkj') format('woff'),
+      url('../fonts/icomoon.svg?dc1kkj#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak-as: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-instagram:before {
+    content: "\e900";
+    /* color: #e4405f; */
+  }
+  .icon-twitter:before {
+    content: "\e901";
+    /* color: #1da1f2; */
+  }
+  .icon-facebook:before {
+    content: "\e902";
+    /* color: #1877f2; */
+  }
+  .icon-folder:before {
+    content: "\e92f";
+  }
+  .icon-folder-open:before {
+    content: "\e930";
+  }
+  .icon-folder-download:before {
+    content: "\e933";
+  }
+  .icon-circle-up:before {
+    content: "\ea41";
+  }
+  .icon-circle-right:before {
+    content: "\ea42";
+  }
+  .icon-circle-down:before {
+    content: "\ea43";
+  }
+  .icon-circle-left:before {
+    content: "\ea44";
+  }
+  .icon-github:before {
+    content: "\eab0";
+  }
+  
+
+:root{
+    --background-color1: #25344E;
+    --button-color2: #3D4F6E;
+    --button-color2-hover: #344461;
+    --header-color: #171F2E;
+    --gray-background: #e0e0e0;
+    --font-color: white;
+    --font-color-2: #262323;
+    --background-white: white;
+}
+
+
+
+
+.header{
+    position: fixed;
+    top: 0;
+    background-color: var(--header-color);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+}
+
+.header ul{
+    display: flex;
+    margin-right: 50px;
+}
+.header ul li{
+    margin: 0 10px;
+    list-style: none;
+}
+.header ul li a{
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+.header .logo{
+    margin-left: 40px;
+    width: 125px;
+    height: 100%;
+    background-image: url('https://pngimage.net/wp-content/uploads/2018/06/logos-anime-png-6.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+body{
+    background-image: url("/images/background/game.jpg");
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+
+
+
+.social{
+    margin-right: 20px;
+}
+
+.social-link{
+    color: var(--font-color);
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+/*------------------------------------------main*/
+.public-post-container{
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.public-post-container .titles-post{
+    color: var(--font-color-2);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.public-post-container .titles-post h1{
+    text-align: center;
+}
+
+.double-post
+{
+    padding: 0 10%;
+}
+.first-member{
+    background-color: var(--background-white);
+    width: 800px;
+    height: 250px;
+    display: grid;
+    grid-template-columns: 300px 500px;
+    overflow: hidden;
+    margin: 35px 0 0 50px;
+    border-radius: 100px;
+    box-shadow: 2px 4px 15px 2px rgba(0, 0, 0, 0.75);
+    box-sizing: border-box;
+    margin-bottom: 35px;
+}
+.first-member-image-container img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.first-member-description
+{
+    padding: 5%;
+    height: 100%;
+}
+.first-member-description p
+{
+    margin-bottom: 10px;
+}
+.member-title, .nickname
+{
+    font-size: 18px;
+}
+.about-member
+{
+    text-align: justify;
+}
+.Social-networks a
+{
+    color: black;
+    text-decoration: none;
+    font-size: 40px;
+}
+
+/*second member*/
+.second-member{
+    background-color: var(--background-white);
+    width: 800px;
+    height: 250px;
+    display: grid;
+    grid-template-columns: 500px 300px;
+    overflow: hidden;
+    margin: 35px 0 0 250px;
+    border-radius: 100px;
+    box-shadow: 2px 4px 15px 2px rgba(0, 0, 0, 0.75);
+    box-sizing: border-box;
+    margin-bottom: 35px;
+}
+.second-member-image-container img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.second-member-description
+{
+    text-align: end;
+    padding: 5%;
+    height: 100%;
+}
+.second-member-description p
+{
+    margin-bottom: 10px;
+}
+.member-title, .nickname
+{
+    font-size: 18px;
+}
+.about-member
+{
+    text-align: justify;
+}
+/*---------------------------------------------footer*/
+.footer{
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-color);
+}
+
+.social{
+    margin-right: 20px;
+}
+
+.social-link{
+    color: var(--font-color);
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.footer .details{
+    margin-left: 20px;
+    display: flex;
+    color: var(--font-color);
+}
