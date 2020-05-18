@@ -1,7 +1,15 @@
-
+/* ----------------------------------home-adivinaLaImagen */
+.body-home-adivinaLaImagen{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
 .home-game-container{
     margin: 30px auto;
     width: 800px;
+    height: 540px;
 }
 .home-game-container .title{
     text-align: center;
@@ -12,8 +20,42 @@
 .home-game-container .description{
     margin: 15px 0 30px;
     text-align: justify;
-    color: blue;
 }
+.game-opinions-container{
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.opinion-post{
+    border-radius: 22px;
+    width: 350px;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 10px;
+    box-shadow: 3px 3px 8px -3px rgba(0,0,0,0.75);
+}
+.image-opinion-container{
+    width: 100%;
+    height: 100px;
+}
+.image-opinion-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.opinion-description{
+    padding: 10px;
+}
+.opinion-username{
+    font-weight: bold;
+    font-size: 18px;
+}
+.opinion-details{
+    text-align: justify;
+}
+
 .home-game-container .button-container{
     margin: 0 auto;
     width: 100px;
@@ -26,4 +68,35 @@
     border: none;
     font-weight: bold;
     font-size: 20px;
+    background-color: #B40404;
+    color: white;
+    cursor: pointer;
+}
+
+/* -------------------------------------------------footer */
+
+.footer{
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-color);
+}
+
+.social{
+    margin-right: 20px;
+}
+
+.social-link{
+    color: var(--font-color);
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.footer .details{
+    margin-left: 20px;
+    display: flex;
+    color: var(--font-color);
 }

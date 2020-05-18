@@ -122,34 +122,4 @@ button{
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-
-}
-
-
-/* -------------------------------------------------footer */
-
-.footer{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    background-color: var(--header-color);
-}
-
-.social{
-    margin-right: 20px;
-}
-
-.social-link{
-    color: var(--font-color);
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 10px;
-}
-
-.footer .details{
-    margin-left: 20px;
-    display: flex;
-    color: var(--font-color);
 }
