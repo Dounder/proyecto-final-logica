@@ -1,34 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/home.css">
-    <title>Nuestro proyecto</title>
+    <link rel="shortcut icon" href="https://i.imgur.com/CxKUDvX.png">
+    <link rel="icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/1dd5ee3c-73af-40bc-80d9-b0050cff2557/d5uomxw-cb20a6a9-6018-4b74-a60c-ebaf0910da3a.png">
+    <title>Home</title>
 </head>
-<body>
-    <header class="header">
-        <figure class="logo"></figure>
-        <div class="options">
-            <ul>
-                <li><a href="#">Sudoku</a></li>
-                <li><a href="html/home-adivinaLaImagen.html">Adivina la imagen</a></li>
-                <li><a href="#">Adivina el numero</a></li>
-            </ul>
-        </div>
-    </header>
 
-    <footer class="footer">
-        <div class="details">
-            <p>Curso: Logica | Universidad Mariano Galvez <br>
-            Made with 💖 by grupo 1 </p>
-        </div>
-        <div class="social">
-            <a href="#" class="social-link icon-facebook"></a>
-            <a href="#" class="social-link icon-instagram"></a>
-            <a href="#" class="social-link icon-twitter"></a>
-            <a href="#" class="social-link icon-github"></a>
-        </div>
-    </footer>
+<body class="center-block ">
+    <!--Aqui van los links a las redes sociales-->
+    <div id="top" class="col-md-12 col-sm-12 col-xs-12 text-right no-float">
+        <nav>
+            <a href="http://facebook.com" style="text-decoration:none">
+                <img src="https://i.imgur.com/4V9urdB.png">
+            </a>
+            <a href="http://Twitter.com" style="text-decoration:none">
+                <img src="https://i.imgur.com/3BDU0wI.png">
+            </a>
+            <a href="http://Instagram.com" style="text-decoration:none">
+                <img src="https://i.imgur.com/t7eAdFi.png">
+            </a>
+            <a href="http://youtube.com" style="text-decoration:none">
+                <img src="https://i.imgur.com/qakNfUY.png" alt="">
+            </a>
+            <a href="http://github.com" style="text-decoration:none">
+                <img src="https://i.imgur.com/lTJajmL.png">
+            </a>
+        </nav>
+    </div>
+    <div id="header" class="col-md-12 col-sm-12">
+        <!--Aqui es donde va el logo y el enlace para la biografia de nosotros-->
+        <img src="https://i.imgur.com/llcT8SP.png">
+            <button class="col-md-4 col-xs-4 text-center">Sobre nosotros.</button>
+        </a>
+    </div>
+    <div id="slogan" class="flower no-float">
+        <!--Aqui puse el slogan-->
+        <p>La lógica te llevará de A hasta B. Pero la imaginación te llevará a todas partes.</p>
+    </div>
+    <div id="main" class="container col-md-4 col-sm-4 col-xs-12">
+        <!--Aqui empieza la seccion de los juegos-->
+        <a href="../html/home-adivinaLaImagen.html">
+            <!--Aqui va el enlace a el juego de adivina la imagen-->
+            <figure>
+                <img src="https://i.imgur.com/rKWIE6J.jpg">
+                <div class="label">
+                    <h3>Adivina la Imagen.</h3>
+                    <p>En este juego se pondrá a prueba tu capacidad para reconocer objetos mediante imágenes con una pequeña pista.</p>
+                </div>
+            </figure>
+        </a>
+    </div>
+    <div id="main" class="container col-md-4 col-sm-4 col-xs-12">
+        <a href="sudoku.html">
+            <!--Aqui va el enlace del sudoku-->
+            <figure>
+                <img src="https://i.imgur.com/uh6FE3o.jpg">
+                <div class="label">
+                    <h3>Sudoku.</h3>
+                    <p>En este juego se pondrá a prueba tu habilidad para pensar y analizar poniendo un número en cada casilla sin que se repita].</p>
+                </div>
+            </figure>
+        </a>
+    </div>
+    <div id="main" class="container col-md-4 col-sm-4 col-xs-12">
+        <a href="../html/adivinaNumero.html">
+            <!--Aqui va el enlace de adivina el numero-->
+            <figure>
+                <img src="https://i.imgur.com/llARS5m.jpg">
+                <div class="label">
+                    <h3>Adivina el número.</h3>
+                    <p>En este juego se te presenta el desafío de adivinar el número.</p>
+                </div>
+            </figure>
+        </a>
+    </div>
 </body>
+
 </html>
