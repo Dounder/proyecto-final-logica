@@ -18,4 +18,4 @@ Para realizar este proyecto tuvimos que aprender los siguiente:
 
 **Nota: Un archivo readme.md es una excelente practica.**
 Para ver nuestro proyecto  dale click al siguiente enlace .
-[Este es el epico enlace para ir a nuestro proyecto](https://dubavenxp.github.io/proyecto-final-logica/index.html "proyecto")
+[Este es el epico enlace para ir a nuestro proyecto](https://dubavenxp.github.io/proyecto-final-logica "proyecto")

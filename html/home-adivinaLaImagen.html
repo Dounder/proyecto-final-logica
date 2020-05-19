@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/adivinaLaImagen.css">
-    <link rel="stylesheet" href="../css/home.css">
     <title>Adivina la imagen</title>
 </head>
-
-<body>
+<body class="body-home-adivinaLaImagen">
     <header class="header">
         <figure class="logo"></figure>
         <div class="options">
@@ -17,25 +14,60 @@
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="">Sudoku</a></li>
                 <li><a href="home-adivinaLaImagen.html">Adivina la imagen</a></li>
-                <li><a href="#">Adivina el numero</a></li>
+                <li><a href="adivinaNumero.html">Adivina el numero</a></li>
+                <li><a href="sobrenosotros.html">Sobre nosotros</a></li>
             </ul>
         </div>
     </header>
     <main>
-        <h1>Bienvenido al juego de adivina la imagen</h1>
-        <h3>Instrucciones del juego</h3>
+        <div class="home-game-container">
+            <h1 class="title">Bienvenido al juego de adivina la imagen</h1>
+            <h3 class="subtitle">Instrucciones del juego</h3>
+            <p class="description">
+                Se te presentara una imagen cualquiera y tu trabajo es adivinar a que serie pertenece
+                dale click en <strong>"START"</strong> y diviertete jugando. Con esta dinamica de juego tienes altas probabilidades de convertirte en un rockstar ninja de la aldea de la hoja. El mismisimo principe saijayin ha jugado adivina la imagen como premio obtuvo una death note, este es un texto de relleno ¿Porque sigues leyendo    ?
+            </p>
+            <h3 style="font-size: 22px;">OPINIONES DEL JUEGO</h3>
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <br>
+            <section class="game-opinions-container">
+                <article class="opinion-post">
+                    <div class="image-opinion-container">
+                        <img src="https://www.tierragamer.com/wp-content/uploads/2019/09/One-Piece-Monkey-D-Luffy-Sonrisa.jpg" alt="">
+                    </div>
+                    <div class="opinion-description">
+                        <p class="opinion-username">Monkey D. Luffy</p>
+                        <p class="opinion-details">Este juego me ha cambiado la vida, espero saquen la siguiente version. <strong>"Yo sere el rey de los piratas"</strong>.</p>
+                    </div>
+                </article>
+                <article class="opinion-post">
+                    <div class="image-opinion-container">
+                        <img src="https://depor.com/resizer/f0lBfDosC6Wxa-XUdYsNn6mp8Ec=/1200x800/smart/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/EZUULO3CDNESBLCGA65W3KWPZY.jpg" alt="">
+                    </div>
+                    <div class="opinion-description">
+                        <p class="opinion-username">El principe Vegeta</p>
+                        <p class="opinion-details">Insectos!!! Les juro que la proxima vez completare este juego adivinando todas la imagenes <strong>"Kakarotto arggghhhhhh...."</strong>.</p>
+                    </div>
+                </article>
+            </section>
+            <div class="button-container">
+                <a href="adivinaLaimagen.html" class="start-button" id="start-button">
+                    <input type="submit" value="START">
+                </a>
+            </div>
+        </div>
     </main>
     <footer class="footer">
         <div class="details">
-            <p>Curso: Logica | Universidad Mariano Galvez <br> Made with 💖 by grupo 1 </p>
+            <p>Curso: Logica | Universidad Mariano Galvez <br>
+            Made with 💖 by grupo 1 </p>
         </div>
         <div class="social">
             <a href="#" class="social-link icon-facebook"></a>
             <a href="#" class="social-link icon-instagram"></a>
             <a href="#" class="social-link icon-twitter"></a>
-            <a href="#" class="social-link icon-github"></a>
+            <a href="https://github.com/DubAvenXP/proyecto-final-logica" class="social-link icon-github"></a>
         </div>
     </footer>
 </body>
-
 </html>
