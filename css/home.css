@@ -3,7 +3,7 @@ body {
     background-color: rgb(0, 78, 152, 1);
 }
 
-:root{
+:root {
     --background-color1: #25344E;
     --button-color2: #3D4F6E;
     --button-color2-hover: #344461;
@@ -40,7 +40,7 @@ a:hover {
 }
 
 #header img {
-    width: 75px;
+    width: 120px;
     padding: 10px;
     border-radius: 25px;
 }
@@ -53,7 +53,7 @@ a:hover {
     border-radius: 25px;
     display: flex;
     float: right;
-    margin-top: 15px;
+    margin-top: 30px;
     width: 180px;
     justify-content: center;
 }
