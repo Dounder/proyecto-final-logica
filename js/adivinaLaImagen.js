@@ -64,11 +64,18 @@
     function reloadGame() {
         location.reload();
     }
+    function removeEventClickError($element){
+        $element.removeEventListener("click",  () =>{
+            console.log('sin eventos');
+        })
+    }
+    function showAlert() {
+        alert("Oooooops \nFallaste, ese no era el nombre del Anime \nSe reiniciara el juego");    }
     function addEventClickError($element) {
         $element.addEventListener('click', () => {
             swal("Tu respuesta es incorrecta!", "Se reiniciara el juego en breve", "error");
-            
-            setTimeout(reloadGame, 5000)
+            reloadGame()
+            showAlert()
         })        
     }
     function addEventClickSuccess($element, index) {
@@ -149,7 +156,19 @@
         $element.append(animeImage);
 
         fillAllOptions(options, anime, index);
+    }
 
+    function counterItemTemplate(index){
+        return`
+            <h3>${index}/50</h3>
+        `    
+    }
+
+    function renderNumber($element, index){
+        $element.children[0].remove();
+        const HTMLString_counter = counterItemTemplate(index);
+        const counter = createTemplate(HTMLString_counter);
+        $element.append(counter);
     }
     
     const $gameImageContainer = document.getElementById('game-image-container');
@@ -157,10 +176,13 @@
     const $option2 = document.getElementById('option-2');
     const $option3 = document.getElementById('option-3');
     const $option4 = document.getElementById('option-4');
+    const $countercontainer = document.getElementById('counter-container');
     const options_array = [$option1, $option2, $option3, $option4]
         
     
     async function inicialiar(index){
+        let number = index + 1
+        renderNumber($countercontainer, number)
         const animeName = generateName(index)
         const {results: { 0: anime}} = await getAnimes(`${BASE_URL}?q=${animeName}&page=1&limit=1`);
         renderAnime(anime, $gameImageContainer, options_array, index);
