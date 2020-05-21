@@ -339,13 +339,20 @@ button{
         margin: 0 auto;
     }
     .footer{
-        padding: 15px 0 0 10px;
+        margin: 0;
+        padding: 20px 0;
         display: block;
         height: auto;
         text-align: center;
     }
     .social{
         margin: 10px 0;
+    }
+    .footer .details{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0;
     }
 
 }
