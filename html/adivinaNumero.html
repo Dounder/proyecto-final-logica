@@ -42,12 +42,17 @@
         document.getElementById("button").addEventListener("click", function() {
             var input = document.getElementById("dato").value;
 
-            if (input == numero) {
-                alert("Felicidades has adivinado el número. \nPulsa aceptar para volver a jugar.");
+            if (input > 10) {
+                alert("Debes ingresar un número entre 1 y 10. \nPulsa aceptar para volver a jugar.")
                 location.reload();
             } else {
-                alert("Mala suerte, no has adivinado el número. \nEl número era " + numero + "\nPulsa aceptar para volver a jugar.");
-                location.reload();
+                if (input == numero) {
+                    alert("Felicidades has adivinado el número. \nPulsa aceptar para volver a jugar.");
+                    location.reload();
+                } else {
+                    alert("Mala suerte, no has adivinado el número. \nEl número era " + numero + "\nPulsa aceptar para volver a jugar.");
+                    location.reload();
+                }
             }
         });
     </script>
