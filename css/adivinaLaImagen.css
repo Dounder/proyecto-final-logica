@@ -246,7 +246,7 @@ header{
 .game-main-container{
     text-align: center;
     margin: auto;
-    width: 800px;
+    max-width: 800px;
     height: 600px;
 }
 .game-main-container .game-title{
@@ -298,8 +298,7 @@ header{
 }
 
 /* ---------------------------------------------------------Responsive Desing Home */
-@media screen and (max-width: 1024px){
-}
+
 @media screen and (max-width: 810px){
     .header{
         display: block;
@@ -355,11 +354,25 @@ header{
         justify-content: center;
         margin: 0;
     }
+
+    /*----------------------juego*/
+    .game-adivinaLaImagen-body{
+        position: relative;
+    }
+    .game-main-container{
+        min-height: 700px;
+    }
+    .buttons-game{
+        grid-template-columns: 1fr;
+    }
 }
 @media screen and (max-width: 490px){
+    .game-main-container{
+        min-height: 800px;
+    }
     .home-game-container{
         height: 72em;
-        margin: 0;
+        margin-top: 10px;
     }
     .home-game-container .description{
         margin-bottom: 125px;
@@ -380,5 +393,4 @@ header{
     .home-game-container{
         height: 70em;
     }
-
 }
