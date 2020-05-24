@@ -93,17 +93,17 @@ button{
 
 
 .header{
-    position: fixed;
-    top: 0;
+
     background-color: var(--header-color);
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     height: 50px;
     width: 100%;
     align-items: center;
 }
-
+.header figure{
+    width: 100px;
+}
 .header ul{
     display: flex;
     margin-right: 50px;
@@ -126,15 +126,6 @@ button{
     background-position: center;
     background-size: contain;
 }
-body{
-    background-image: url("/images/background/game.jpg");
-    background-repeat: repeat;
-    background-size: contain;
-    background-position: center;
-}
-
-
-
 
 .social{
     margin-right: 20px;
@@ -149,7 +140,6 @@ body{
 
 /*------------------------------------------main*/
 .public-post-container{
-    margin-top: 50px;
     padding-top: 25px;
     display: flex;
     flex-wrap: wrap;
@@ -157,7 +147,6 @@ body{
     background-image: url('https://i.imgur.com/gS4VuUr.jpg');
 }
 .public-post-container .titles-post{
-    width: 800px;
     background-color: rgba(0, 0, 0, 0.75);
     color: var(--font-color);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -174,17 +163,23 @@ body{
     padding: 0 10%;
 }
 .first-member{
+
     background-color: var(--background-white);
-    width: 800px;
-    height: 250px;
+    max-width: 800px;
+    max-height: 265px;
     display: grid;
-    grid-template-columns: 300px 500px;
+    grid-template-columns: 0.6fr 1fr;
     overflow: hidden;
     margin: 35px 0 0 50px;
     border-radius: 100px;
     box-shadow: 2px 4px 15px 2px rgba(0, 0, 0, 0.75);
     box-sizing: border-box;
     margin-bottom: 35px;
+   
+}
+
+.first-member-image-container{
+    height: 100%;
 }
 .first-member-image-container img
 {
@@ -194,8 +189,8 @@ body{
     
 }
 .first-member-description
-{
-    padding: 5%;
+{   
+    padding: 10px;
     height: 100%;
 }
 .first-member-description p
@@ -220,10 +215,10 @@ body{
 /*second member*/
 .second-member{
     background-color: var(--background-white);
-    width: 800px;
-    height: 250px;
+    max-width: 800px;
+    max-height: 265px;
     display: grid;
-    grid-template-columns: 500px 300px;
+    grid-template-columns: 1fr 0.6fr;
     overflow: hidden;
     margin: 35px 0 0 250px;
     border-radius: 100px;
@@ -281,4 +276,95 @@ body{
     margin-left: 20px;
     display: flex;
     color: var(--font-color);
+}
+
+
+@media screen and (max-width: 1321px){
+    .second-member{
+        margin: 35px 0 0;
+    }
+    .first-member{
+        margin: 35px 0 0;
+    }
+    .double-post
+    {
+        padding: 0 1%;
+    }
+    .second-member .about-member{
+        text-align: right;
+    }
+    .first-member .about-member{
+        text-align: left;
+    }
+}
+@media screen and (max-width: 800px){
+    .second-member{
+        border-radius: 22px;
+        margin: 35px 0 0;
+        height: 600px;
+    }
+    .first-member{
+        border-radius: 22px;
+        margin: 35px 0 0;
+        height: 600px;
+    }
+    .double-post
+    {
+        padding: 0 1%;
+    }
+    .second-member .about-member{
+        text-align: right;
+    }
+    .first-member .about-member{
+        text-align: left;
+    }
+    .header{
+        display: block;
+        height: auto;
+        margin: 0;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .header ul{
+        display: block;
+        text-align: center;
+        margin: 0;
+    }
+    .header ul li{
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    .header .logo{
+        height: 50px;
+        margin: 0 auto;
+    }
+    .footer{
+        margin: 0;
+        padding: 20px 0;
+        display: block;
+        height: auto;
+        text-align: center;
+    }
+    .social{
+        margin: 10px 0;
+    }
+    .footer .details{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+}
+@media screen and (max-width: 475px){
+    .second-member{
+        border-radius: 22px;
+        margin: 35px 0 0;
+        max-height: 360px;
+    }
+    .first-member{
+        border-radius: 22px;
+        margin: 35px 0 0;
+        max-height: 360px;
+    }
 }

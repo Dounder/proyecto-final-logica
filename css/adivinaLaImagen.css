@@ -134,9 +134,9 @@ header{
     left: 0; */
 }
 .home-game-container{
-    margin: 30px auto;
-    width: 800px;
-    height: 540px;
+    margin: 10px auto 50px;
+    max-width: 800px;
+    max-height: auto;
 }
 .home-game-container .title{
     text-align: center;
@@ -160,8 +160,8 @@ header{
 
 .opinion-post{
     border-radius: 22px;
-    width: 350px;
-    height: 100%;
+    max-width: 350px;
+    max-height: 100%;
     overflow: hidden;
     margin: 0 10px;
     box-shadow: 3px 3px 8px -3px rgba(0,0,0,0.75);
@@ -246,7 +246,7 @@ header{
 .game-main-container{
     text-align: center;
     margin: auto;
-    width: 800px;
+    max-width: 800px;
     height: 600px;
 }
 .game-main-container .game-title{
@@ -295,4 +295,102 @@ header{
     cursor: pointer;
     height: auto;
     width: auto;
+}
+
+/* ---------------------------------------------------------Responsive Desing Home */
+
+@media screen and (max-width: 810px){
+    .header{
+        display: block;
+        height: auto;
+        margin: 0;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .header ul{
+        display: block;
+        text-align: center;
+        margin: 0;
+    }
+    .header ul li{
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    .header .logo{
+        height: 50px;
+        margin: 0 auto;
+    }
+    .home-game-container{
+        height: 700px;
+    }
+    .home-game-container .subtitle{
+        margin: 15px 20px;
+    }
+    .home-game-container .description{
+        margin: 15px 20px 30px;
+    }
+    .home-game-container .opinion-title{
+        margin: 15px 20px;
+    }
+    .game-opinions-container .opinion-post {
+        min-height: 250px;
+    }
+    .home-game-container .button-container{
+        margin: 70px auto 0 ;
+    }
+    .footer{
+        margin: auto;
+        padding: 20px 0;
+        display: block;
+        height: auto;
+        text-align: center;
+    }
+    .social{
+        margin: 10px 0;
+    }
+    .footer .details{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    /*----------------------juego*/
+    .game-adivinaLaImagen-body{
+        position: relative;
+    }
+    .game-main-container{
+        min-height: 700px;
+    }
+    .buttons-game{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 490px){
+    .game-main-container{
+        min-height: 800px;
+    }
+    .home-game-container{
+        height: 72em;
+        margin-top: 10px;
+    }
+    .home-game-container .description{
+        margin-bottom: 125px;
+    }
+    .game-opinions-container{
+        flex-wrap: wrap;
+    }
+    .opinion-post{
+        margin: 15px;
+        height: 100px;
+    }
+    .button-container{
+        position: relative;
+        bottom: 450px;
+    }
+}
+@media screen and (max-width: 320px){
+    .home-game-container{
+        height: 70em;
+    }
 }
