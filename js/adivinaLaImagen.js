@@ -64,11 +64,6 @@
     function reloadGame() {
         location.reload();
     }
-    function removeEventClickError($element){
-        $element.removeEventListener("click",  () =>{
-            console.log('sin eventos');
-        })
-    }
     function showAlert() {
         alert("Oooooops \nFallaste, ese no era el nombre del Anime \nSe reiniciara el juego");    }
     function addEventClickError($element) {

@@ -1,6 +1,3 @@
-*{
-  margin: 0;
-}
 @import url('https://fonts.googleapis.com/css?family=Roboto:300i,400,500,700&display=swap');
 
 *{
@@ -96,6 +93,7 @@ header{
 }
 
 .header ul{
+  padding: 0;
   display: flex;
   margin-right: 50px;
 }
@@ -137,7 +135,6 @@ header{
 table {
   background-color: #000000;
   border-collapse: collapse;
-  padding: 0px;
   border: none;
   margin: 35px auto 0;
 }
@@ -197,7 +194,6 @@ button.starte {
 
 button.resets {
   border: 8px inset #e5e5e5;
-  border-radius: 10px;
   border-radius: 10px;
   padding: 10px;
 }
@@ -275,33 +271,53 @@ button.resets {
 
 @media screen and (max-width: 810px){
   .header{
-      display: block;
-      height: auto;
-      margin: 0;
-      text-align: center;
-      padding-bottom: 10px;
-  }
-  .header ul{
-      display: block;
-      text-align: center;
-      margin: 0;
-  }
+    display: block;
+    height: auto;
+    margin: 0;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.header ul{
+    display: block;
+    text-align: center;
+    margin: 0;
+}
+.header ul li{
+    font-size: 18px;
+    margin-top: 10px;
+}
+.header .logo{
+    height: 50px;
+    margin: 0 auto;
+}
 
-  .footer{
-      margin: auto;
-      padding: 20px 0;
-      display: block;
-      height: auto;
-      text-align: center;
-  }
-  .social{
-      margin: 10px 0;
-  }
-  .footer .details{
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin: 0;
-  }
+.footer{
+    margin: auto;
+    padding: 20px 0;
+    display: block;
+    height: auto;
+    text-align: center;
+}
+.social{
+    margin: 10px 0;
+}
+.footer .details{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
 
+}
+@media screen and (max-width: 500px){
+  input {
+    max-width: 38px;
+    min-height: 38px;
+  }
+}
+@media screen and (max-width: 365px){
+  input {
+    max-width: 35px;
+    min-height: 35px;
+  }
 }

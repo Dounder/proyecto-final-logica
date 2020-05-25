@@ -1,13 +1,15 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>
-            sudoku
-        </title>
-    </head>
-    <link rel="stylesheet" href="../css/sudoku2.css">
-    <body>
-        <header class="header">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        sudoku
+    </title>
+</head>
+<link rel="stylesheet" href="../css/sudoku2.css">
+
+<body>
+    <header class="header">
         <figure class="logo"></figure>
         <div class="options">
             <ul>
@@ -19,152 +21,153 @@
             </ul>
         </div>
     </header>
-        <main class="sudoku-container">
-            <h1 class="title1">Sudoku</h1>
-            <table  class="tabla" id="tablero">
-                <tr>
-                    <td><input class="fila1 columna1"  id="00" type="number" min="1" max="9"></td>
-                    <td><input class="fila1" id="01" type="number" min="1" max="9"></td>
-                    <td><input class="fila1 columna2" id="02" type="number" min="1" max="9" ></td>
-    
-                    <td><input class="fila1" id="03" type="number" min="1" max="9"></td>
-                    <td><input class="fila1" id="04" type="number" min="1" max="9"></td>
-                    <td><input class="fila1 columna3" id="05" type="number" min="1" max="9"></td>
-    
-                    <td><input class="fila1" id="06" type="number" min="1" max="9"></td>
-                    <td><input class="fila1" id="07" type="number" min="1" max="9"></td>
-                    <td><input class="fila1 columna4" id="08" type="number" min="1" max="9"></td>
-                </tr>
-    
-                <tr>
-                    <td><input class="fila2 columna1" id="10" type="number" min="1" max="9"></td>
-                    <td><input class="fila2" id="11" type="number" min="1" max="9"></td>
-                    <td><input class="fila2 columna2" id="12" type="number" min="1" max="9"></td>
-    
-                    <td><input class="fila2" id="13" type="number" min="1" max="9"></td>
-                    <td><input class="fila2" id="14" type="number" min="1" max="9"></td>
-                    <td><input class="fila2 columna3" id="15" type="number" min="1" max="9"></td>
-    
-                    <td><input class="fila2" id="16" type="number" min="1" max="9"></td>
-                    <td><input class="fila2" id="17" type="number" min="1" max="9"></td>
-                    <td><input class="fila2 columna4" id="18" type="number" min="1" max="9"></td>
-                </tr>
-    
-                <tr>
-                    <td><input class="fila3 columna1" id="20" type="number" min="1" max="9"></td>
-                    <td><input class="fila3" id="21" type="number" min="1" max="9"></td>
-                    <td><input class="fila3 columna2" id="22" type="number" min="1" max="9"></td>
-    
-                    <td><input class="fila3" id="23" type="number" min="1" max="9"></td>
-                    <td><input class="fila3" id="24" type="number" min="1" max="9"></td>
-                    <td><input class="fila3 columna3" id="25" type="number" min="1" max="9"></td>
-    
-                    <td><input class="fila3" id="26" type="number" min="1" max="9"></td>
-                    <td><input class="fila3" id="27" type="number" min="1" max="9"></td>
-                    <td><input class="fila3 columna4" id="28" type="number" min="1" max="9"></td>
-                </tr>
-    
-                <tr>
-                    <td><input class="fila4 columna1" id="30" type="number" min="1" max="9"></td>
-                    <td><input class="fila4" id="31" type="number" min="1" max="9"></td>
-                    <td><input class="fila4 columna2" id="32" type="number" min="1" max="9"></td>
-    
-                    <td><input class="fila4" id="33" type="number" min="1" max="9"></td>
-                    <td><input class="fila4" id="34" type="number" min="1" max="9"></td>
-                    <td><input class="fila4 columna3" id="35" type="number" min="1" max="9"></td>
-    
-                    <td><input class="fila4" id="36" type="number" min="1" max="9"></td>
-                    <td><input class="fila4" id="37" type="number" min="1" max="9"></td>
-                    <td><input class="fila4 columna4" id="38" type="number" min="1" max="9"></td>
-                </tr>
-    
-                <tr>
-                    <td><input class="fila5 columna1" id="40" type="number" min="1" max="9"></td>
-                    <td><input class="fila5" id="41" type="number" min="1" max="9"></td>
-                    <td><input class="fila5 columna2" id="42" type="number" min="1" max="9"></td>
-    
-                    <td><input class="fila5" id="43" type="number" min="1" max="9"></td>
-                    <td><input class="fila5" id="44" type="number" min="1" max="9"></td>
-                    <td><input class="fila5 columna3" id="45" type="number" min="1" max="9"></td>
-    
-                    <td><input class="fila5" id="46" type="number"  min="1" max="9"></td>
-                    <td><input class="fila5" id="47" type="number" min="1" max="9"></td>
-                    <td><input class="fila5 columna4" id="48" type="number" min="1" max="9"></td>
-                </tr>
-    
-                <tr>
-                    <td><input class="fila6 columna1" id="50" type="number" min="1" max="9"></td>
-                    <td><input class="fila6" id="51" type="number" min="1" max="9"></td>
-                    <td><input class="fila6 columna2" id="52" type="number" min="1" max="9"></td>
-    
-                    <td><input class="fila6" id="53" type="number" min="1" max="9"></td>
-                    <td><input class="fila6" id="54" type="number" min="1" max="9"></td>
-                    <td><input class="fila6 columna3" id="55" type="number" min="1" max="9"></td>
-    
-                    <td><input class="fila6" id="56" type="number" min="1" max="9"></td>
-                    <td><input class="fila6" id="57" type="number" min="1" max="9"></td>
-                    <td><input class="fila6 columna4" id="58" type="number" min="1" max="9"></td>
-                </tr>
-    
-                <tr>
-                    <td><input class="fila7 columna1" id="60" type="number" min="1" max="9"></td>
-                    <td><input class="fila7" id="61" type="number" min="1" max="9"></td>
-                    <td><input class="fila7 columna2" id="62" type="number" min="1" max="9"></td>
-    
-                    <td><input class="fila7" id="63" type="number" min="1" max="9"></td>
-                    <td><input class="fila7" id="64" type="number" min="1" max="9"></td>
-                    <td><input class="fila7 columna3" id="65" type="number" min="1" max="9"></td>
-    
-                    <td><input class="fila7" id="66" type="number" min="1" max="9"></td>
-                    <td><input class="fila7" id="67" type="number" min="1" max="9"></td>
-                    <td><input class="fila7 columna4" id="68" type="number" min="1" max="9"></td>
-                </tr>
-    
-                <tr>
-                    <td><input class="fila8 columna1" id="70" type="number" min="1" max="9"></td>
-                    <td><input class="fila8" id="71" type="number" min="1" max="9"></td>
-                    <td><input class="fila8 columna2" id="72" type="number" min="1" max="9"></td>
-    
-                    <td><input class="fila8" id="73" type="number" min="1" max="9"></td>
-                    <td><input class="fila8" id="74" type="number" min="1" max="9"></td>
-                    <td><input class="fila8 columna3" id="75" type="number" min="1" max="9"></td>
-    
-                    <td><input class="fila8" id="76" type="number" min="1" max="9"></td>
-                    <td><input class="fila8" id="77" type="number" min="1" max="9"></td>
-                    <td><input class="fila8 columna4" id="78" type="number" min="1" max="9" ></td>
-                </tr>
-    
-                <tr>
-                    <td><input class="fila9 columna1" id="80" type="number" min="1" max="9"></td>
-                    <td><input class="fila9" id="81" type="number" min="1" max="9"></td>
-                    <td><input class="fila9 columna2" id="82" type="number" min="1" max="9"></td>
-    
-                    <td><input class="fila9" id="83" type="number" min="1" max="9"></td>
-                    <td><input class="fila9" id="84" type="number" min="1" max="9"></td>
-                    <td><input class="fila9 columna3" id="85" type="number" min="1" max="9"></td>
-    
-                    <td><input class="fila9" id="86" type="number" min="1" max="9"></td>
-                    <td><input class="fila9" id="87" type="number" min="1" max="9"></td>
-                    <td><input class="fila9 columna4" id="88" type="number" min="1" max="9"></td>
-                </tr>
-            </table>
-            <div class="sudoku-buttons">
-                <button class="starte" type="button" id="start">START</button>
-                <button class="resets" type="button" id="reset">RESET</button>
-            </div>
-        </main>
-        <footer class="footer">
-            <div class="details">
-                <p>Curso: Logica | Universidad Mariano Galvez <br>
+    <main class="sudoku-container">
+        <h1 class="title1">Sudoku</h1>
+        <table class="tabla" id="tablero">
+            <tr>
+                <td><input class="fila1 columna1" id="00" type="number" min="1" max="9"></td>
+                <td><input class="fila1" id="01" type="number" min="1" max="9"></td>
+                <td><input class="fila1 columna2" id="02" type="number" min="1" max="9"></td>
+
+                <td><input class="fila1" id="03" type="number" min="1" max="9"></td>
+                <td><input class="fila1" id="04" type="number" min="1" max="9"></td>
+                <td><input class="fila1 columna3" id="05" type="number" min="1" max="9"></td>
+
+                <td><input class="fila1" id="06" type="number" min="1" max="9"></td>
+                <td><input class="fila1" id="07" type="number" min="1" max="9"></td>
+                <td><input class="fila1 columna4" id="08" type="number" min="1" max="9"></td>
+            </tr>
+
+            <tr>
+                <td><input class="fila2 columna1" id="10" type="number" min="1" max="9"></td>
+                <td><input class="fila2" id="11" type="number" min="1" max="9"></td>
+                <td><input class="fila2 columna2" id="12" type="number" min="1" max="9"></td>
+
+                <td><input class="fila2" id="13" type="number" min="1" max="9"></td>
+                <td><input class="fila2" id="14" type="number" min="1" max="9"></td>
+                <td><input class="fila2 columna3" id="15" type="number" min="1" max="9"></td>
+
+                <td><input class="fila2" id="16" type="number" min="1" max="9"></td>
+                <td><input class="fila2" id="17" type="number" min="1" max="9"></td>
+                <td><input class="fila2 columna4" id="18" type="number" min="1" max="9"></td>
+            </tr>
+
+            <tr>
+                <td><input class="fila3 columna1" id="20" type="number" min="1" max="9"></td>
+                <td><input class="fila3" id="21" type="number" min="1" max="9"></td>
+                <td><input class="fila3 columna2" id="22" type="number" min="1" max="9"></td>
+
+                <td><input class="fila3" id="23" type="number" min="1" max="9"></td>
+                <td><input class="fila3" id="24" type="number" min="1" max="9"></td>
+                <td><input class="fila3 columna3" id="25" type="number" min="1" max="9"></td>
+
+                <td><input class="fila3" id="26" type="number" min="1" max="9"></td>
+                <td><input class="fila3" id="27" type="number" min="1" max="9"></td>
+                <td><input class="fila3 columna4" id="28" type="number" min="1" max="9"></td>
+            </tr>
+
+            <tr>
+                <td><input class="fila4 columna1" id="30" type="number" min="1" max="9"></td>
+                <td><input class="fila4" id="31" type="number" min="1" max="9"></td>
+                <td><input class="fila4 columna2" id="32" type="number" min="1" max="9"></td>
+
+                <td><input class="fila4" id="33" type="number" min="1" max="9"></td>
+                <td><input class="fila4" id="34" type="number" min="1" max="9"></td>
+                <td><input class="fila4 columna3" id="35" type="number" min="1" max="9"></td>
+
+                <td><input class="fila4" id="36" type="number" min="1" max="9"></td>
+                <td><input class="fila4" id="37" type="number" min="1" max="9"></td>
+                <td><input class="fila4 columna4" id="38" type="number" min="1" max="9"></td>
+            </tr>
+
+            <tr>
+                <td><input class="fila5 columna1" id="40" type="number" min="1" max="9"></td>
+                <td><input class="fila5" id="41" type="number" min="1" max="9"></td>
+                <td><input class="fila5 columna2" id="42" type="number" min="1" max="9"></td>
+
+                <td><input class="fila5" id="43" type="number" min="1" max="9"></td>
+                <td><input class="fila5" id="44" type="number" min="1" max="9"></td>
+                <td><input class="fila5 columna3" id="45" type="number" min="1" max="9"></td>
+
+                <td><input class="fila5" id="46" type="number" min="1" max="9"></td>
+                <td><input class="fila5" id="47" type="number" min="1" max="9"></td>
+                <td><input class="fila5 columna4" id="48" type="number" min="1" max="9"></td>
+            </tr>
+
+            <tr>
+                <td><input class="fila6 columna1" id="50" type="number" min="1" max="9"></td>
+                <td><input class="fila6" id="51" type="number" min="1" max="9"></td>
+                <td><input class="fila6 columna2" id="52" type="number" min="1" max="9"></td>
+
+                <td><input class="fila6" id="53" type="number" min="1" max="9"></td>
+                <td><input class="fila6" id="54" type="number" min="1" max="9"></td>
+                <td><input class="fila6 columna3" id="55" type="number" min="1" max="9"></td>
+
+                <td><input class="fila6" id="56" type="number" min="1" max="9"></td>
+                <td><input class="fila6" id="57" type="number" min="1" max="9"></td>
+                <td><input class="fila6 columna4" id="58" type="number" min="1" max="9"></td>
+            </tr>
+
+            <tr>
+                <td><input class="fila7 columna1" id="60" type="number" min="1" max="9"></td>
+                <td><input class="fila7" id="61" type="number" min="1" max="9"></td>
+                <td><input class="fila7 columna2" id="62" type="number" min="1" max="9"></td>
+
+                <td><input class="fila7" id="63" type="number" min="1" max="9"></td>
+                <td><input class="fila7" id="64" type="number" min="1" max="9"></td>
+                <td><input class="fila7 columna3" id="65" type="number" min="1" max="9"></td>
+
+                <td><input class="fila7" id="66" type="number" min="1" max="9"></td>
+                <td><input class="fila7" id="67" type="number" min="1" max="9"></td>
+                <td><input class="fila7 columna4" id="68" type="number" min="1" max="9"></td>
+            </tr>
+
+            <tr>
+                <td><input class="fila8 columna1" id="70" type="number" min="1" max="9"></td>
+                <td><input class="fila8" id="71" type="number" min="1" max="9"></td>
+                <td><input class="fila8 columna2" id="72" type="number" min="1" max="9"></td>
+
+                <td><input class="fila8" id="73" type="number" min="1" max="9"></td>
+                <td><input class="fila8" id="74" type="number" min="1" max="9"></td>
+                <td><input class="fila8 columna3" id="75" type="number" min="1" max="9"></td>
+
+                <td><input class="fila8" id="76" type="number" min="1" max="9"></td>
+                <td><input class="fila8" id="77" type="number" min="1" max="9"></td>
+                <td><input class="fila8 columna4" id="78" type="number" min="1" max="9"></td>
+            </tr>
+
+            <tr>
+                <td><input class="fila9 columna1" id="80" type="number" min="1" max="9"></td>
+                <td><input class="fila9" id="81" type="number" min="1" max="9"></td>
+                <td><input class="fila9 columna2" id="82" type="number" min="1" max="9"></td>
+
+                <td><input class="fila9" id="83" type="number" min="1" max="9"></td>
+                <td><input class="fila9" id="84" type="number" min="1" max="9"></td>
+                <td><input class="fila9 columna3" id="85" type="number" min="1" max="9"></td>
+
+                <td><input class="fila9" id="86" type="number" min="1" max="9"></td>
+                <td><input class="fila9" id="87" type="number" min="1" max="9"></td>
+                <td><input class="fila9 columna4" id="88" type="number" min="1" max="9"></td>
+            </tr>
+        </table>
+        <div class="sudoku-buttons">
+            <button class="starte" type="button" id="start">START</button>
+            <button class="resets" type="button" id="reset">RESET</button>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="details">
+            <p>Curso: Logica | Universidad Mariano Galvez <br>
                 Made with 💖 by grupo 1 </p>
-            </div>
-            <div class="social">
-                <a href="#" class="social-link icon-facebook"></a>
-                <a href="#" class="social-link icon-instagram"></a>
-                <a href="#" class="social-link icon-twitter"></a>
-                <a href="https://github.com/DubAvenXP/proyecto-final-logica" class="social-link icon-github"></a>
-            </div>
-        </footer>
-        <script src="../js/sudoku2.js"></script>
-    </body>
+        </div>
+        <div class="social">
+            <a href="#" class="social-link icon-facebook"></a>
+            <a href="#" class="social-link icon-instagram"></a>
+            <a href="#" class="social-link icon-twitter"></a>
+            <a href="https://github.com/DubAvenXP/proyecto-final-logica" class="social-link icon-github"></a>
+        </div>
+    </footer>
+    <script src="../js/sudoku2.js"></script>
+</body>
+
 </html>
