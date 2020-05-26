@@ -79,7 +79,7 @@
             if (index === 50) {
                 swal("Felicidades!!!!!!!", "Juego terminado, se nota que no te bañas", "Success");
             }else{
-                inicialiar(index)
+                inicializar(index)
             }
         })        
     }
@@ -175,14 +175,14 @@
     const options_array = [$option1, $option2, $option3, $option4]
         
     
-    async function inicialiar(index){
+    async function inicializar(index){
         let number = index + 1
         renderNumber($countercontainer, number)
         const animeName = generateName(index)
         const {results: { 0: anime}} = await getAnimes(`${BASE_URL}?q=${animeName}&page=1&limit=1`);
         renderAnime(anime, $gameImageContainer, options_array, index);
     }
-    
-    inicialiar(0)    
+    debugger
+    inicializar(0)    
     
 })()
