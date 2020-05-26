@@ -50,7 +50,7 @@
 
                         } else {
                             // has acertado y añadimos un texto a las respuestas
-                            respuestas += "<br><span class='correcto'>" + numero + " - Has adivinado!!</span>";
+                            respuestas += "<br><span class='correct'>" + numero + " - Has adivinado!!</span>";
                             fin()
                         }
                         // vaciamos el valor del numero
@@ -61,7 +61,7 @@
                     }
 
                 } else {
-                    respuestas += "<br><span class='fin'>No has adivinado!! el úmero era " + numeroAdivinar + "</span>";
+                    respuestas += "<br><span class='fin'>No has adivinado!! el número era " + numeroAdivinar + "</span>";
                     fin()
                 }
                 // ponemos nuevamente todas las respuestas
@@ -108,10 +108,18 @@
     <div id="info" class="col-md-12 col-sm-12 col-xs-12 text-center no-float">
         <!--aqui es donde se muestra toda la informacion al usuario-->
         <p id="title">Adivina el número.</p>
-        <p id="content">En el siguiente cuadro ingresa un número entre 1 y 10.</p>
-        <input type="text" id="dato">
-        <button id="button">Resolver</button>
+        <form onsubmit="return adivinar()">
+            <br> Ingresa el número de intentos posibles:
+            <input type="text" name="numeroRespuestas" id="numeroRespuestas">
+            <br>Ingresa un número desde 1 hasta 100:
+            <input type="text" name="numero" id="numero" disabled>
+            <br><input type="submit" value="Enviar" id="btnEnviar">
+        </form>
+        <!--aqui se guardan todas las respuestas ingresadas por el usuario-->
+        <div id="respuestas"></div>
     </div>
 </body>
+
+</html>
 
 </html>
