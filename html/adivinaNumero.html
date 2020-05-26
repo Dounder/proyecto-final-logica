@@ -9,34 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="https://i.imgur.com/5NnpY0b.png?2">
     <title>Adivina el número.</title>
-</head>
-
-<body>
-    <div id="header" class="text-right no-float">
-        <!--seccion del header-->
-        <a href="../index.html" style="text-decoration:none">
-        <button>HOME</button>
-        </a>
-        <a href="home-adivinaLaImagen.html" style="text-decoration:none">
-            <!--link al juego de adivina la imagen-->
-            <button>Adivina la Imagen</button>
-        </a>
-        <a href="sudoku2.html" style="text-decoration:none">
-            <!--link al juego de sudoku-->
-            <button>Sudoku</button>
-        </a>
-        <a href="sobrenosotros.html" style="text-decoration:none">
-            <!--link a la pagina sobre nosotros-->
-            <button>Sobre nosotros</button>
-        </a>
-    </div>
-    <div id="info" class="col-md-12 col-sm-12 col-xs-12 text-center no-float">
-        <!--aqui es donde se muestra toda la informacion al usuario-->
-        <p id="title">Adivina el número.</p>
-        <p id="content">En el siguiente cuadro ingresa un número entre 1 y 10.</p>
-        <input type="text" id="dato">
-        <button id="button">Resolver</button>
-    </div>
     <script>
         // buscamos un numero aleatorio entre 1 y 100
         var numeroAdivinar = Math.floor((Math.random() * 100) + 1);
@@ -112,6 +84,34 @@
             return !isNaN(parseFloat(n)) && isFinite(n);
         }
     </script>
+</head>
+
+<body>
+    <div id="header" class="text-right no-float">
+        <!--seccion del header-->
+        <a href="../index.html" style="text-decoration:none">
+            <button>HOME</button>
+        </a>
+        <a href="home-adivinaLaImagen.html" style="text-decoration:none">
+            <!--link al juego de adivina la imagen-->
+            <button>Adivina la Imagen</button>
+        </a>
+        <a href="sudoku2.html" style="text-decoration:none">
+            <!--link al juego de sudoku-->
+            <button>Sudoku</button>
+        </a>
+        <a href="sobrenosotros.html" style="text-decoration:none">
+            <!--link a la pagina sobre nosotros-->
+            <button>Sobre nosotros</button>
+        </a>
+    </div>
+    <div id="info" class="col-md-12 col-sm-12 col-xs-12 text-center no-float">
+        <!--aqui es donde se muestra toda la informacion al usuario-->
+        <p id="title">Adivina el número.</p>
+        <p id="content">En el siguiente cuadro ingresa un número entre 1 y 10.</p>
+        <input type="text" id="dato">
+        <button id="button">Resolver</button>
+    </div>
 </body>
 
 </html>
