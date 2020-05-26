@@ -1,7 +1,7 @@
 <html>
-
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         sudoku
     </title>
@@ -21,143 +21,138 @@
             </ul>
         </div>
     </header>
-    <main class="sodoku-container">
-        <div class="sudoku-game-container">
+    <main class="sudoku-container">
+        <h1 class="title1">Sudoku</h1>
+        <table class="tabla" id="tablero">
+            <tr>
+                <td><input class="fila1 columna1" id="00" type="number" min="1" max="9"></td>
+                <td><input class="fila1" id="01" type="number" min="1" max="9"></td>
+                <td><input class="fila1 columna2" id="02" type="number" min="1" max="9"></td>
 
-            <h1>Bienvenido al juego de Sudoku</h1>
-            <table class="tabla">
-                <tbody>
-                    <tr>
-                        <td><input class="fila1" id="a1" type="number" value="5" disabled max="9" min="0"></td>
-                        <td><input class="fila1" id="b1" type="number" value="3" disabled></td>
-                        <td><input class="fila1" id="c1" type="number" min="0" max="9"></td>
+                <td><input class="fila1" id="03" type="number" min="1" max="9"></td>
+                <td><input class="fila1" id="04" type="number" min="1" max="9"></td>
+                <td><input class="fila1 columna3" id="05" type="number" min="1" max="9"></td>
 
-                        <td><input class="fila1" id="d1" type="number"></td>
-                        <td><input class="fila1" id="e1" type="number" value="7" disabled></td>
-                        <td><input class="fila1" id="-f1" type="number"></td>
+                <td><input class="fila1" id="06" type="number" min="1" max="9"></td>
+                <td><input class="fila1" id="07" type="number" min="1" max="9"></td>
+                <td><input class="fila1 columna4" id="08" type="number" min="1" max="9"></td>
+            </tr>
 
-                        <td><input class="fila1" id="g1" type="number"></td>
-                        <td><input class="fila1" id="h1" type="number"></td>
-                        <td><input class="fila1" id="i1" type="number"></td>
-                    </tr>
+            <tr>
+                <td><input class="fila2 columna1" id="10" type="number" min="1" max="9"></td>
+                <td><input class="fila2" id="11" type="number" min="1" max="9"></td>
+                <td><input class="fila2 columna2" id="12" type="number" min="1" max="9"></td>
 
-                    <tr>
-                        <td><input class="fila2" id="a2" type="number" value="6" disabled></td>
-                        <td><input class="fila2" id="b2" type="number"></td>
-                        <td><input class="fila2" id="c2" type="number"></td>
+                <td><input class="fila2" id="13" type="number" min="1" max="9"></td>
+                <td><input class="fila2" id="14" type="number" min="1" max="9"></td>
+                <td><input class="fila2 columna3" id="15" type="number" min="1" max="9"></td>
 
-                        <td><input class="fila2" id="d2" type="number" value="1" disabled></td>
-                        <td><input class="fila2" id="e2" type="number" value="9" disabled></td>
-                        <td><input class="fila2" id="f2" type="number" value="5" disabled></td>
+                <td><input class="fila2" id="16" type="number" min="1" max="9"></td>
+                <td><input class="fila2" id="17" type="number" min="1" max="9"></td>
+                <td><input class="fila2 columna4" id="18" type="number" min="1" max="9"></td>
+            </tr>
 
-                        <td><input class="fila2" id="g2" type="number"></td>
-                        <td><input class="fila2" id="h2" type="number"></td>
-                        <td><input class="fila2" id="i2" type="number"></td>
-                    </tr>
+            <tr>
+                <td><input class="fila3 columna1" id="20" type="number" min="1" max="9"></td>
+                <td><input class="fila3" id="21" type="number" min="1" max="9"></td>
+                <td><input class="fila3 columna2" id="22" type="number" min="1" max="9"></td>
 
-                    <tr>
-                        <td><input class="fila3" id="a3" type="number"></td>
-                        <td><input class="fila3" id="b3" type="number" value="9" disabled></td>
-                        <td><input class="fila3" id="c3" type="number" value="8" disabled></td>
+                <td><input class="fila3" id="23" type="number" min="1" max="9"></td>
+                <td><input class="fila3" id="24" type="number" min="1" max="9"></td>
+                <td><input class="fila3 columna3" id="25" type="number" min="1" max="9"></td>
 
-                        <td><input class="fila3" id="d3" type="number"></td>
-                        <td><input class="fila3" id="e3" type="number"></td>
-                        <td><input class="fila3" id="f3" type="number"></td>
+                <td><input class="fila3" id="26" type="number" min="1" max="9"></td>
+                <td><input class="fila3" id="27" type="number" min="1" max="9"></td>
+                <td><input class="fila3 columna4" id="28" type="number" min="1" max="9"></td>
+            </tr>
 
-                        <td><input class="fila3" id="g3" type="number"></td>
-                        <td><input class="fila3" id="h3" type="number" value="6" disabled></td>
-                        <td><input class="fila3" id="i3" type="number"></td>
-                    </tr>
+            <tr>
+                <td><input class="fila4 columna1" id="30" type="number" min="1" max="9"></td>
+                <td><input class="fila4" id="31" type="number" min="1" max="9"></td>
+                <td><input class="fila4 columna2" id="32" type="number" min="1" max="9"></td>
 
-                    <tr>
-                        <td><input class="fila4" id="a4" type="number"></td>
-                        <td><input class="fila4" id="b4" type="number"></td>
-                        <td><input class="fila4" id="c4" type="number"></td>
+                <td><input class="fila4" id="33" type="number" min="1" max="9"></td>
+                <td><input class="fila4" id="34" type="number" min="1" max="9"></td>
+                <td><input class="fila4 columna3" id="35" type="number" min="1" max="9"></td>
 
-                        <td><input class="fila4" id="d4" type="number"></td>
-                        <td><input class="fila4" id="e4" type="number" value="6" disabled></td>
-                        <td><input class="fila4" id="f4" type="number"></td>
+                <td><input class="fila4" id="36" type="number" min="1" max="9"></td>
+                <td><input class="fila4" id="37" type="number" min="1" max="9"></td>
+                <td><input class="fila4 columna4" id="38" type="number" min="1" max="9"></td>
+            </tr>
 
-                        <td><input class="fila4" id="g4" type="number"></td>
-                        <td><input class="fila4" id="h4" type="number"></td>
-                        <td><input class="fila4" id="i4" type="number" value="3" disabled></td>
-                    </tr>
+            <tr>
+                <td><input class="fila5 columna1" id="40" type="number" min="1" max="9"></td>
+                <td><input class="fila5" id="41" type="number" min="1" max="9"></td>
+                <td><input class="fila5 columna2" id="42" type="number" min="1" max="9"></td>
 
-                    <tr>
-                        <td><input class="fila5" id="a5" type="number" value="4" disabled></td>
-                        <td><input class="fila5" id="b5" type="number"></td>
-                        <td><input class="fila5" id="c5" type="number"></td>
+                <td><input class="fila5" id="43" type="number" min="1" max="9"></td>
+                <td><input class="fila5" id="44" type="number" min="1" max="9"></td>
+                <td><input class="fila5 columna3" id="45" type="number" min="1" max="9"></td>
 
-                        <td><input class="fila5" id="d5" type="number" value="8"></td>
-                        <td><input class="fila5" id="e5" type="number"></td>
-                        <td><input class="fila5" id="f5" type="number"></td>
+                <td><input class="fila5" id="46" type="number" min="1" max="9"></td>
+                <td><input class="fila5" id="47" type="number" min="1" max="9"></td>
+                <td><input class="fila5 columna4" id="48" type="number" min="1" max="9"></td>
+            </tr>
 
-                        <td><input class="fila5" id="g5" type="number" value="4" disabled></td>
-                        <td><input class="fila5" id="h5" type="number"></td>
-                        <td><input class="fila5" id="i5" type="number" value="1" disabled></td>
-                    </tr>
+            <tr>
+                <td><input class="fila6 columna1" id="50" type="number" min="1" max="9"></td>
+                <td><input class="fila6" id="51" type="number" min="1" max="9"></td>
+                <td><input class="fila6 columna2" id="52" type="number" min="1" max="9"></td>
 
-                    <tr>
-                        <td><input class="fila6" id="a6" type="number"></td>
-                        <td><input class="fila6" id="b6" type="number"></td>
-                        <td><input class="fila6" id="c6" type="number"></td>
+                <td><input class="fila6" id="53" type="number" min="1" max="9"></td>
+                <td><input class="fila6" id="54" type="number" min="1" max="9"></td>
+                <td><input class="fila6 columna3" id="55" type="number" min="1" max="9"></td>
 
-                        <td><input class="fila6" id="d6" type="number"></td>
-                        <td><input class="fila6" id="e6" type="number" value="2" disabled></td>
-                        <td><input class="fila6" id="f6" type="number"></td>
+                <td><input class="fila6" id="56" type="number" min="1" max="9"></td>
+                <td><input class="fila6" id="57" type="number" min="1" max="9"></td>
+                <td><input class="fila6 columna4" id="58" type="number" min="1" max="9"></td>
+            </tr>
 
-                        <td><input class="fila6" id="g6" type="number"></td>
-                        <td><input class="fila6" id="h6" type="number"></td>
-                        <td><input class="fila6" id="i6" type="number"></td>
-                    </tr>
+            <tr>
+                <td><input class="fila7 columna1" id="60" type="number" min="1" max="9"></td>
+                <td><input class="fila7" id="61" type="number" min="1" max="9"></td>
+                <td><input class="fila7 columna2" id="62" type="number" min="1" max="9"></td>
 
-                    <tr>
-                        <td><input class="fila7" id="a7" type="number"></td>
-                        <td><input class="fila7" id="b7" type="number" value="2" disabled></td>
-                        <td><input class="fila7" id="c7" type="number"></td>
+                <td><input class="fila7" id="63" type="number" min="1" max="9"></td>
+                <td><input class="fila7" id="64" type="number" min="1" max="9"></td>
+                <td><input class="fila7 columna3" id="65" type="number" min="1" max="9"></td>
 
-                        <td><input class="fila7" id="d7" type="number"></td>
-                        <td><input class="fila7" id="e7" type="number"></td>
-                        <td><input class="fila7" id="f7" type="number"></td>
+                <td><input class="fila7" id="66" type="number" min="1" max="9"></td>
+                <td><input class="fila7" id="67" type="number" min="1" max="9"></td>
+                <td><input class="fila7 columna4" id="68" type="number" min="1" max="9"></td>
+            </tr>
 
-                        <td><input class="fila7" id="g7" type="number" value="2" disabled></td>
-                        <td><input class="fila7" id="h7" type="number"></td>
-                        <td><input class="fila7" id="i7" type="number"></td>
-                    </tr>
+            <tr>
+                <td><input class="fila8 columna1" id="70" type="number" min="1" max="9"></td>
+                <td><input class="fila8" id="71" type="number" min="1" max="9"></td>
+                <td><input class="fila8 columna2" id="72" type="number" min="1" max="9"></td>
 
-                    <tr>
-                        <td><input class="fila8" id="a8" type="number"></td>
-                        <td><input class="fila8" id="b8" type="number"></td>
-                        <td><input class="fila8" id="c8" type="number"></td>
+                <td><input class="fila8" id="73" type="number" min="1" max="9"></td>
+                <td><input class="fila8" id="74" type="number" min="1" max="9"></td>
+                <td><input class="fila8 columna3" id="75" type="number" min="1" max="9"></td>
 
-                        <td><input class="fila8" id="d8" type="number" value="2" disabled></td>
-                        <td><input class="fila8" id="e8" type="number"></td>
-                        <td><input class="fila8" id="f8" type="number"></td>
+                <td><input class="fila8" id="76" type="number" min="1" max="9"></td>
+                <td><input class="fila8" id="77" type="number" min="1" max="9"></td>
+                <td><input class="fila8 columna4" id="78" type="number" min="1" max="9"></td>
+            </tr>
 
-                        <td><input class="fila8" id="g8" type="number"></td>
-                        <td><input class="fila8" id="h8" type="number"></td>
-                        <td><input class="fila8" id="i8" type="number" value="5" disabled></td>
-                    </tr>
+            <tr>
+                <td><input class="fila9 columna1" id="80" type="number" min="1" max="9"></td>
+                <td><input class="fila9" id="81" type="number" min="1" max="9"></td>
+                <td><input class="fila9 columna2" id="82" type="number" min="1" max="9"></td>
 
-                    <tr>
-                        <td><input class="fila9" id="a9" type="number"></td>
-                        <td><input class="fila9" id="b9" type="number"></td>
-                        <td><input class="fila9" id="c9" type="number"></td>
+                <td><input class="fila9" id="83" type="number" min="1" max="9"></td>
+                <td><input class="fila9" id="84" type="number" min="1" max="9"></td>
+                <td><input class="fila9 columna3" id="85" type="number" min="1" max="9"></td>
 
-                        <td><input class="fila9" id="d9" type="number"></td>
-                        <td><input class="fila9" id="e9" type="number"></td>
-                        <td><input class="fila9" id="f9" type="number"></td>
-
-                        <td><input class="fila9" id="g9" type="number"></td>
-                        <td><input class="fila9" id="h9" type="number"></td>
-                        <td><input class="fila9" id="i9" type="number" value="9" disabled></td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="buttons-container">
-                <button class="starte" type="button" id="start">START</button>
-                <button class="resets" type="button" id="reset">RESET</button>
-            </div>
+                <td><input class="fila9" id="86" type="number" min="1" max="9"></td>
+                <td><input class="fila9" id="87" type="number" min="1" max="9"></td>
+                <td><input class="fila9 columna4" id="88" type="number" min="1" max="9"></td>
+            </tr>
+        </table>
+        <div class="sudoku-buttons">
+            <button class="starte" type="button" id="start">START</button>
+            <button class="resets" type="button" id="reset">RESET</button>
         </div>
     </main>
     <footer class="footer">

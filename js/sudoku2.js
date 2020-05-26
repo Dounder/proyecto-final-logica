@@ -10,30 +10,9 @@
 //     ['3', '.', '.', '.', '9', '.', '.', '.', '.',],
 // ];
 
-function isvalid(_matrix, row, col, k) {
-    for (let i = 0; i < 9; i++) {
-
-        let m = 3 * Math.floor(row / 3) + Math.floor(i/ 3);
-        let n = 3 * Math.floor(col / 3) + i % 3;
-        if (_matrix[row][i] == k || _matrix[i][col] == k || _matrix[m][n] == k) {
-            return false;
-        }
-    }
-    return true;
-}
-
-function validacion (_matrix, row, col, numero) {
-    let valid = isvalid(_matrix, row, col, numero)
-    if(valid) {
-        _matrix[row][col] = numero
-
-    } else{
-
-        console.log("fallo")
-    }
-}
 
 var matrix = [];
+
 for(var i = 0; i < 9; i++) {
     matrix[i] = [];
     for(var j = 0; j < 9; j++) {
@@ -41,22 +20,61 @@ for(var i = 0; i < 9; i++) {
     }
 }
 
+var delegado = (selector) => (callback) => (event) => event.target.matches(selector) && callback(event)
+var delegadoinput = delegado('input[type=number]')
+
+const $table = document.getElementById('tablero')
+
+$table.addEventListener('input',
+    delegadoinput((elemento) => {
+        var id = elemento.srcElement.id;
+
+        var numero = elemento.data;
+        validacion(matrix, numero, id)
+        }
+    )
+)
+
+function isvalid(_matrix, row, col, numero) {
+    for (let i = 0; i < 9; i++) {
+        let m = 3 * Math.floor(row / 3) + Math.floor(i/ 3);
+        let n = 3 * Math.floor(col / 3) + i % 3;
+        if (_matrix[row][i] == numero || _matrix[i][col] == numero || _matrix[m][n] == numero) {
+            return false;
+        }
+    }
+    return true;
+}
+
+
+function validacion (_matrix, numero, id) {
+    var coordenadas = id.split("");
+    var fila = coordenadas[0]
+    var columna = coordenadas [1]
+    let valid = isvalid(_matrix, fila, columna, numero)
+    if(valid) {
+        _matrix[fila][columna] = numero
+    } else{
+        console.log("fallo")
+        document.getElementById(id).style.backgroundColor = "red";
+    }
+}
+
+
+
 const $start = document.getElementById('start')
 const $reset = document.getElementById('reset')
 
-function onclickstart ($start){
-    $start.addEventListener('click', iniciarjuego)
-}
 
+$start.addEventListener('click', iniciarjuego)
 
 function iniciarjuego(){
-    alert('juego se va inicializar')
-    console.log('hola')
+    alert('El juego es muy sencillo completa cada celda con numeros del 1 al 9 sin repetir en las casillas, filas o region')
 }
 
+$reset.addEventListener('click', reiniciarJuego)
 
-
-onclickstart($start)
-
-// Sacar el valor de las filas y las columnas
-// cambiar css con javascript
+function reiniciarJuego(){
+    location.reload();
+    alert('Se reinicio el juego para que puedas volver a empezar desde cero')
+}

@@ -2,180 +2,155 @@
 
 *{
     margin: 0;
-    padding: 0;
     font-family: 'Roboto', sans-serif;
 }
 
-button{
-    background: transparent;
-    border-radius: 25px;
-    height: 25px;
-    width: 25px;
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?dc1kkj');
+  src:  url('../fonts/icomoon.eot?dc1kkj#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?dc1kkj') format('truetype'),
+    url('../fonts/icomoon.woff?dc1kkj') format('woff'),
+    url('../fonts/icomoon.svg?dc1kkj#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
-@font-face {
-    font-family: 'icomoon';
-    src:  url('../fonts/icomoon.eot?dc1kkj');
-    src:  url('../fonts/icomoon.eot?dc1kkj#iefix') format('embedded-opentype'),
-      url('../fonts/icomoon.ttf?dc1kkj') format('truetype'),
-      url('../fonts/icomoon.woff?dc1kkj') format('woff'),
-      url('../fonts/icomoon.svg?dc1kkj#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-  }
-  
-  [class^="icon-"], [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
-    speak-as: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-  
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  .icon-instagram:before {
-    content: "\e900";
-    /* color: #e4405f; */
-  }
-  .icon-twitter:before {
-    content: "\e901";
-    /* color: #1da1f2; */
-  }
-  .icon-facebook:before {
-    content: "\e902";
-    /* color: #1877f2; */
-  }
-  .icon-folder:before {
-    content: "\e92f";
-  }
-  .icon-folder-open:before {
-    content: "\e930";
-  }
-  .icon-folder-download:before {
-    content: "\e933";
-  }
-  .icon-circle-up:before {
-    content: "\ea41";
-  }
-  .icon-circle-right:before {
-    content: "\ea42";
-  }
-  .icon-circle-down:before {
-    content: "\ea43";
-  }
-  .icon-circle-left:before {
-    content: "\ea44";
-  }
-  .icon-github:before {
-    content: "\eab0";
-  }
-  
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak-as: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-instagram:before {
+  content: "\e900";
+  /* color: #e4405f; */
+}
+.icon-twitter:before {
+  content: "\e901";
+  /* color: #1da1f2; */
+}
+.icon-facebook:before {
+  content: "\e902";
+  /* color: #1877f2; */
+}
+.icon-folder:before {
+  content: "\e92f";
+}
+.icon-folder-open:before {
+  content: "\e930";
+}
+.icon-folder-download:before {
+  content: "\e933";
+}
+.icon-circle-up:before {
+  content: "\ea41";
+}
+.icon-circle-right:before {
+  content: "\ea42";
+}
+.icon-circle-down:before {
+  content: "\ea43";
+}
+.icon-circle-left:before {
+  content: "\ea44";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+
+
 
 :root{
-    --background-color1: #25344E;
-    --button-color2: #3D4F6E;
-    --button-color2-hover: #344461;
-    --header-color: #171F2E;
-    --gray-background: #e0e0e0;
-    --font-color: white;
-    --font-color-2: #262323;
-}
-
-
-body {
-    margin: 0;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+  --background-color1: #25344E;
+  --button-color2: #3D4F6E;
+  --button-color2-hover: #344461;
+  --header-color: #171F2E;
+  --gray-background: #e0e0e0;
+  --font-color: white;
+  --font-color-2: #262323;
 }
 
 /*-----------------------------------header*/
 header{
-    background-color: var(--header-color);
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    height: 50px;
-    width: 100%;
-    align-items: center;
+  background-color: var(--header-color);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  width: 100%;
+  align-items: center;
 }
 
 .header ul{
-    display: flex;
-    margin-right: 50px;
+  padding: 0;
+  display: flex;
+  margin-right: 50px;
 }
 .header ul li{
-    margin: 0 10px;
-    list-style: none;
+  margin: 0 10px;
+  list-style: none;
 }
 .header ul li a{
-    color: var(--font-color);
-    text-decoration: none;
+  color: var(--font-color);
+  text-decoration: none;
 }
 
 .header .logo{
-    margin-left: 40px;
-    width: 125px;
-    height: 100%;
-    background-image: url('https://pngimage.net/wp-content/uploads/2018/06/logos-anime-png-6.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+  margin-left: 40px;
+  width: 125px;
+  height: 100%;
+  background-image: url('https://pngimage.net/wp-content/uploads/2018/06/logos-anime-png-6.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+/*------------------------------------------------------------------sudoku*/
+.title1 {
+  color: azure;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0px;
+  border: 0px;
+  outline: none;
+  margin: 0 0 15px;
+}
+.sudoku-container{
+  width: 100%;
+  background-image: url('https://i.imgur.com/KGPWtTd.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-/*--------------------------------------------------------------Sudoku*/
+table {
+  background-color: #000000;
+  border-collapse: collapse;
+  border: none;
+  margin: 35px auto 0;
+}
 
-.sodoku-container{
-    height: 600px;
-    width: 100%;
-    background-image: url('https://i.imgur.com/9kFU43F.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+
+input {
+  color: #000000;
+  padding: 0px;
+  border: 0px;
+  text-align: center;
+  max-width: 48px;
+  min-height: 48px;
+  font-size: 28px;
+  background-color: #ffffff;
+  outline: none;
 }
-.sudoku-game-container{
-    padding: 15px;
-    text-align: center;
-    margin: 0 auto;
-    width: 800px;
-}
-.sudoku-game-container h1{
-    color: var(--font-color);
-}
-table{
-    width: 350;
-    margin:  0;
-}
-td{
-    border: 2px solid #000000;
-    text-align: center;
-    align-content: center;
-}
-input{
-    color: #000000;
-    padding: 0;
-    border: 0;
-    text-align: center;
-    width: 45px;
-    height: 45px;
-    font-size: 24px;
-    background-color: #ffffff;
-    outline: none;
-}
-.fila1 {
-    border-top: 2px solid #000000;
-    display: block;
-    align-content: center;
-    }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -183,73 +158,166 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.sudoku-buttons{
+  display: flex;
+  justify-content: center;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
 .starte {
-    height: 60px;
-    width: 100px;
-    font-size: large;
-    font-family: cursive;
-    background-color: #bfc0c0;
-    color: #000000;
+  margin: 10px;
+  height: 60px;
+  max-width: 100px;
+  font-size: large;
+  font-family: cursive;
+  background-color: #bfc0c0;
+  color: #000000;
+
 }
 
 .resets {
-    height: 60px;
-    width: 100px;
-    font-size: large;
-    font-family: cursive;
-    background-color: #bfc0c0;
-    color: #000000;
+  margin: 10px;
+  height: 60px;
+  max-width: 100px;
+  font-size: large;
+  font-family: cursive;
+  background-color: #bfc0c0;
+  color: #000000;
 }
 
-button.starte{
-    margin: 0 30px;
-    border: 8px inset #e5e5e5;
-    border-radius: 22px;
-    padding: 10px;
+button.starte {
+  border: 10px inset #e5e5e5;
+  border-radius: 10px;
+  padding: 10px;
 }
 
-button.resets{
-    margin: 0 30px;
-    border: 8px inset #e5e5e5;
-    border-radius: 22px;
-    padding: 10px;
+button.resets {
+  border: 8px inset #e5e5e5;
+  border-radius: 10px;
+  padding: 10px;
 }
 
-.tabla{
-    margin: 0 auto;
+.fila1 {
+  border-top: 7px solid black;
 }
 
-.buttons-container{
-    margin: 10px 0 0 0;
-    display: flex;
-    justify-content: center;
+.fila3 {
+  border-bottom: 7px solid black;
 }
 
+.fila4 {
+  border-top: 7px solid black;
+}
+
+.fila6 {
+  border-bottom: 7px solid black;
+}
+
+.fila7 {
+  border-top: 7px solid black;
+}
+
+.fila9 {
+  border-bottom: 7px solid black;
+}
+
+.columna1 {
+  border-left: 7px solid black;
+}
+
+.columna2{
+  border-right: 7px solid black;
+}
+
+.columna3{
+  border-right: 7px solid black;
+}
+
+.columna4{
+  border-right: 7px solid black;
+}
 
 /* -------------------------------------------------footer */
 
 .footer{
-    height: 75px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--header-color);
+  height: 75px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--header-color);
 }
 
 .social{
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .social-link{
-    color: var(--font-color);
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 10px;
+  color: var(--font-color);
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 10px;
 }
 
 .footer .details{
-    margin-left: 20px;
+  margin-left: 20px;
+  display: flex;
+  color: var(--font-color);
+}
+
+
+/* ---------------------------------------------------------Responsive Desing Home */
+
+@media screen and (max-width: 810px){
+  .header{
+    display: block;
+    height: auto;
+    margin: 0;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.header ul{
+    display: block;
+    text-align: center;
+    margin: 0;
+}
+.header ul li{
+    font-size: 18px;
+    margin-top: 10px;
+}
+.header .logo{
+    height: 50px;
+    margin: 0 auto;
+}
+
+.footer{
+    margin: auto;
+    padding: 20px 0;
+    display: block;
+    height: auto;
+    text-align: center;
+}
+.social{
+    margin: 10px 0;
+}
+.footer .details{
+    width: 100%;
     display: flex;
-    color: var(--font-color);
+    justify-content: center;
+    margin: 0;
+}
+
+}
+@media screen and (max-width: 500px){
+  input {
+    max-width: 38px;
+    min-height: 38px;
+  }
+}
+@media screen and (max-width: 365px){
+  input {
+    max-width: 35px;
+    min-height: 35px;
+  }
 }
