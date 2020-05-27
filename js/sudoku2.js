@@ -26,10 +26,9 @@ var delegadoinput = delegado('input[type=number]')
 const $table = document.getElementById('tablero')
 
 $table.addEventListener('input',
-    delegadoinput((elemento) => {
-        var id = elemento.srcElement.id;
-
-        var numero = elemento.data;
+    delegadoinput((event) => {
+        var id = event.srcElement.id;
+        var numero = event.data;
         validacion(matrix, numero, id)
         }
     )
@@ -46,7 +45,6 @@ function isvalid(_matrix, row, col, numero) {
     return true;
 }
 
-
 function validacion (_matrix, numero, id) {
     var coordenadas = id.split("");
     var fila = coordenadas[0]
@@ -54,27 +52,55 @@ function validacion (_matrix, numero, id) {
     let valid = isvalid(_matrix, fila, columna, numero)
     if(valid) {
         _matrix[fila][columna] = numero
-    } else{
+        console.log('valido')
+    } else if(numero == null) {
+        document.getElementById(id).style.backgroundColor = "white"
+    }
+    else{
         console.log("fallo")
         document.getElementById(id).style.backgroundColor = "red";
+
     }
+
 }
 
 
 
 const $start = document.getElementById('start')
 const $reset = document.getElementById('reset')
-
+const $validar = document.getElementById('validar')
 
 $start.addEventListener('click', iniciarjuego)
 
 function iniciarjuego(){
-    alert('El juego es muy sencillo completa cada celda con numeros del 1 al 9 sin repetir en las casillas, filas o region')
+    document.getElementById('tablero').style.display = 'block';
+    document.getElementById('reset').style.display = 'block';
+    document.getElementById('validar').style.display = 'block';
+    alert('Cuando hayas completado presiona el boton resultado')
+    $start.style.display = 'none'
 }
+
 
 $reset.addEventListener('click', reiniciarJuego)
 
 function reiniciarJuego(){
-    location.reload();
     alert('Se reinicio el juego para que puedas volver a empezar desde cero')
+    location.reload();
 }
+
+$validar.addEventListener('click', win)
+
+function win() {
+    var c = 0;
+    for(var i = 0; i < 9; i++) {
+        for(var j = 0; j < 9; j++) {
+            if(matrix[i][j] == undefined){
+                c++
+            }
+            if(c == 0){
+               alert('Victory campal')
+            }
+        }
+    }
+}
+

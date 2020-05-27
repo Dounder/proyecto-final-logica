@@ -126,6 +126,7 @@ header{
   margin: 0 0 15px;
 }
 .sudoku-container{
+  height: 600px;
   width: 100%;
   background-image: url('https://i.imgur.com/KGPWtTd.jpg');
   background-repeat: no-repeat;
@@ -137,6 +138,8 @@ table {
   border-collapse: collapse;
   border: none;
   margin: 35px auto 0;
+  max-width: 450px;
+  display: none;
 }
 
 
@@ -184,6 +187,18 @@ input::-webkit-inner-spin-button {
   font-family: cursive;
   background-color: #bfc0c0;
   color: #000000;
+  display: none;
+}
+
+.validacion {
+  margin: 10px;
+  height: 60px;
+  max-width: 100px;
+  font-size: large;
+  font-family: cursive;
+  background-color: #bfc0c0;
+  color: #000000;
+  display: none;
 }
 
 button.starte {
@@ -193,6 +208,12 @@ button.starte {
 }
 
 button.resets {
+  border: 8px inset #e5e5e5;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+button.validacion {
   border: 8px inset #e5e5e5;
   border-radius: 10px;
   padding: 10px;
@@ -310,6 +331,7 @@ button.resets {
 
 }
 @media screen and (max-width: 500px){
+  
   input {
     max-width: 38px;
     min-height: 38px;
